@@ -15,7 +15,7 @@ function App() {
 
   const getMovies = async () => {
     try {
-      const response = await api.get("/api/v1/movies");
+      const response = await api.get("/movies");
 
       console.log(response.data);
       setMovies(response.data);
@@ -30,7 +30,7 @@ function App() {
 
   const getMovieData = async (movieId) => {
     try {
-      const response = await api.get(`/api/v1/movies/${movieId}`);
+      const response = await api.get(`/movies/${movieId}`);
 
       const singleMovie = response.data;
 
